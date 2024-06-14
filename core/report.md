@@ -25,3 +25,4 @@ File:
 [Search Google]({{.SearchURL}})
 
 {{end}}
+
