@@ -8,6 +8,7 @@ require (
 	github.com/spf13/cobra v1.8.0
 	github.com/spf13/viper v1.19.0
 	github.com/taylormonacelli/goldbug v0.0.6
+	mvdan.cc/xurls/v2 v2.5.0
 )
 
 require (
