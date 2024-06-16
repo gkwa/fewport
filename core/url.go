@@ -76,6 +76,7 @@ func cleanGoogleURL(urlStr string) (string, []string, error) {
 		"bih",
 		"biw",
 		"client",
+		"fbs",
 		"dpr",
 		"ei",
 		"gs_lcrp",

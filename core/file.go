@@ -51,13 +51,15 @@ func processFile(path string) ([]ParamInfo, error) {
 	var newContent strings.Builder
 	scanner := bufio.NewScanner(file)
 	var remainingParams []ParamInfo
+	modified := false
 
 	for scanner.Scan() {
 		line := scanner.Text()
-		newLine, modified, params := cleanLine(line, path)
+		newLine, lineModified, params := cleanLine(line, path)
 		newContent.WriteString(newLine + "\n")
 
-		if modified {
+		if lineModified {
+			modified = true
 			fmt.Printf("Modified URL in %s\n", path)
 		}
 
@@ -68,8 +70,10 @@ func processFile(path string) ([]ParamInfo, error) {
 		return nil, err
 	}
 
-	if err := os.WriteFile(path, []byte(newContent.String()), 0o644); err != nil {
-		return nil, err
+	if modified {
+		if err := os.WriteFile(path, []byte(newContent.String()), 0o644); err != nil {
+			return nil, err
+		}
 	}
 
 	return remainingParams, nil
