@@ -93,7 +93,7 @@ func cleanGoogleURL(urlStr string) (string, []string, error) {
 		"sqi",
 		"sxsrf",
 		"uact",
-		"udm",
+		// "udm", // no, udm=2 is image search, eg https://www.google.com/search?udm=2&q=poison+ivy
 		"uds",
 		"ved",
 	}
