@@ -7,7 +7,8 @@ import (
 
 // helloCmd represents the hello command
 var helloCmd = &cobra.Command{
-	Use:   "hello",
+	Use:   "files-from-dir",
+	Aliases: []string{"ffd"},
 	Short: "Clean up Google URLs in markdown files",
 	Long:  `This command recursively searches for markdown files in the specified directory and cleans up Google URLs by removing specific query parameters.`,
 	Run: func(cmd *cobra.Command, args []string) {
