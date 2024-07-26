@@ -1,5 +1,13 @@
 # fewport
 
+## this project is archived
+
+
+[littlewill](https://github.com/gkwa/littlewill?tab=readme-ov-file#littlewill) supersedes it.
+
+
+## 
+
 Purpose:
 Clean google search urls from markdown files in directory.
 
